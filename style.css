@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    /* ------ Primary ------ */
+    --orange: hsl(25, 97%, 53%);
+    /* ------ Neutral ------ */
+    --lightgrey: hsl(217, 12%, 63%);
+    --mediumgrey: rgb(124, 135, 152);
+    --darkblue: hsl(213, 19%, 18%);
+    --verydarkblue: hsl(216, 12%, 8%);
+}
+
+body {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: 'Overpass';
+    background: var(--verydarkblue);
+}
+
+main {
+    width: 30em;
+    height: 30em;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 2em;
+    box-sizing: border-box;
+    background: var(--darkblue);
+}
+.top h1 {
+    color: white;
+}
+.top p {
+    color: var(--lightgrey);
+}
+.circle {
+    box-sizing: border-box;
+    padding: 1em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background: hsl(213, 17%, 23%);
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button {
+    width: 4em;
+    height: 4em;
+    border: none;
+    border-radius: 50%;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--mediumgrey);
+    background: hsl(213, 17%, 23%);
+}
+.buttons button:hover {
+    color: white;
+    background: var(--orange);
+}
+.submit {
+    font-weight: 700;
+    color: white;
+    height: 4em;
+    width: 100%;
+    border: none;
+    border-radius: 2em;
+    background: var(--orange);
+    cursor: pointer;
+}
+.submit:hover {
+    color: var(--orange);
+    background: white;
+}
+.thankyou {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.thankyou img {
+    margin-bottom: 1em;
+}
+.thankyou .selection {
+    padding: 0.5em 1em;
+    font-size: 15px;
+    border-radius: 2em;
+    color: var(--orange);
+    background: rgb(49, 58, 69);
+}
+.thankyou h1 {
+    color: white;
+}
+.thankyou p {
+    color: var(--lightgrey);
+}
+.error {
+    opacity: 0;
+    position: absolute;
+    top: 1em;
+    color: white;
+    padding: 0 1em;
+    border-radius: 1em;
+    background: var(--darkblue);
+    transition: opacity 1s;
+}
+.error span{
+    color: var(--orange);
+}
+footer {
+    background: var(--darkblue);
+    color: var(--lightgrey);
+    padding: 1em;
+    font-size: 16px;
+    border-radius: 1em;
+    position: absolute;
+    bottom: 1em;
+}
+footer a {
+    color: var(--mediumgrey);
+    text-decoration: none;
+    transition: color 0.25s;
+}
+footer a:hover {
+    color: var(--orange);
+}
